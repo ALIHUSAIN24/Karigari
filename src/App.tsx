@@ -295,20 +295,42 @@ export default function App() {
         </div>
       </section>
 
-      <section id="stats" className={`py-32 px-6 transition-all duration-1000 border-t border-b ${isVisible.stats ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ borderColor: 'rgba(255, 255, 255, 0.1)' }}>
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, i) => (
-              <div key={i} className="text-center p-8 rounded-2xl border hover:border-opacity-50 transition-all hover:scale-105" style={{ background: 'rgba(160, 88, 56, 0.2)', borderColor: 'rgba(245, 241, 232, 0.2)' }}>
-                <div className="text-5xl md:text-6xl font-black mb-2" style={{ color: '#F5F1E8' }}>
-                  {stat.number}
-                </div>
-                <div className="font-semibold" style={{ color: 'rgba(245, 241, 232, 0.7)' }}>{stat.label}</div>
-              </div>
-            ))}
+      <section
+  id="stats"
+  className={`py-20 md:py-32 px-4 md:px-6 transition-all duration-1000 border-t border-b ${
+    isVisible.stats ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+  }`}
+  style={{ borderColor: 'rgba(255, 255, 255, 0.1)' }}
+>
+  <div className="max-w-6xl mx-auto">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+      {stats.map((stat, i) => (
+        <div
+          key={i}
+          className="text-center p-4 md:p-8 rounded-2xl border hover:border-opacity-50 transition-all hover:scale-105"
+          style={{
+            background: 'rgba(160, 88, 56, 0.2)',
+            borderColor: 'rgba(245, 241, 232, 0.2)',
+          }}
+        >
+          <div
+            className="text-4xl md:text-6xl font-black mb-1 md:mb-2 leading-tight"
+            style={{ color: '#F5F1E8' }}
+          >
+            {stat.number}
+          </div>
+          <div
+            className="text-sm md:text-base font-semibold"
+            style={{ color: 'rgba(245, 241, 232, 0.7)' }}
+          >
+            {stat.label}
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       <section id="vision" className={`py-32 px-6 transition-all duration-1000 border-t border-b ${isVisible.vision ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ background: 'linear-gradient(to bottom, rgba(160, 88, 56, 0.5), transparent)', borderColor: 'rgba(255, 255, 255, 0.1)' }}>
         <div className="max-w-4xl mx-auto text-center">
@@ -323,54 +345,134 @@ export default function App() {
         </div>
       </section>
 
-      <section id="cta" className={`py-32 px-6 transition-all duration-1000 border-t border-b ${isVisible.cta ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ borderColor: 'rgba(255, 255, 255, 0.1)' }}>
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="relative p-12 md:p-16 rounded-3xl shadow-2xl overflow-hidden" style={{ background: '#F5F1E8', boxShadow: '0 0 60px rgba(245, 241, 232, 0.3)' }}>
-            <div className="absolute inset-0" style={{ background: 'rgba(160, 88, 56, 0.05)' }} />
-            <div className="relative z-10">
-              <h2 className="text-4xl md:text-5xl font-black mb-6" style={{ color: '#A05838' }}>Contact Us</h2>
-              <p className="text-xl mb-12" style={{ color: '#7C4028' }}>
-                Get in touch with us for inquiries and collaborations
-              </p>
-              
-              <div className="max-w-md mx-auto space-y-6">
-                <div className="p-6 rounded-2xl text-left" style={{ background: 'rgba(160, 88, 56, 0.1)' }}>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ background: '#A05838' }}>
-                      <svg className="w-6 h-6" style={{ color: '#F5F1E8' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold mb-1" style={{ color: '#7C4028' }}>Email</p>
-                      <a href="mailto:karigaritheprint@gmail.com" className="text-lg font-bold hover:underline" style={{ color: '#A05838' }}>
-                        karigaritheprint@gmail.com
-                      </a>
-                    </div>
-                  </div>
-                </div>
+      <section
+  id="cta"
+  className={`py-20 md:py-32 px-4 md:px-6 transition-all duration-1000 border-t border-b ${
+    isVisible.cta ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+  }`}
+  style={{ borderColor: 'rgba(255, 255, 255, 0.1)' }}
+>
+  <div className="max-w-4xl mx-auto text-center">
+    <div
+      className="relative p-6 md:p-16 rounded-3xl shadow-2xl overflow-hidden"
+      style={{
+        background: '#F5F1E8',
+        boxShadow: '0 0 60px rgba(245, 241, 232, 0.3)',
+      }}
+    >
+      <div
+        className="absolute inset-0"
+        style={{ background: 'rgba(160, 88, 56, 0.05)' }}
+      />
 
-                <div className="p-6 rounded-2xl text-left" style={{ background: 'rgba(160, 88, 56, 0.1)' }}>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ background: '#A05838' }}>
-                      <svg className="w-6 h-6" style={{ color: '#F5F1E8' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold mb-1" style={{ color: '#7C4028' }}>Phone</p>
-                      <a href="tel:+919871516061" className="text-lg font-bold hover:underline" style={{ color: '#A05838' }}>
-                        +91 981 807 2257<br />
-                        +91 987 151 6061
-                      </a>
-                    </div>
-                  </div>
-                </div>
+      <div className="relative z-10">
+        <h2
+          className="text-3xl md:text-5xl font-black mb-4 md:mb-6"
+          style={{ color: '#A05838' }}
+        >
+          Contact Us
+        </h2>
+
+        <p
+          className="text-base md:text-xl mb-8 md:mb-12"
+          style={{ color: '#7C4028' }}
+        >
+          Get in touch with us for inquiries and collaborations
+        </p>
+
+        <div className="max-w-md mx-auto space-y-4 md:space-y-6">
+          <div
+            className="p-4 md:p-6 rounded-2xl text-left"
+            style={{ background: 'rgba(160, 88, 56, 0.1)' }}
+          >
+            <div className="flex items-center gap-3 md:gap-4">
+              <div
+                className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center"
+                style={{ background: '#A05838' }}
+              >
+                <svg
+                  className="w-5 h-5 md:w-6 md:h-6"
+                  style={{ color: '#F5F1E8' }}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+
+              <div className="min-w-0">
+                <p
+                  className="text-xs md:text-sm font-semibold mb-1"
+                  style={{ color: '#7C4028' }}
+                >
+                  Email
+                </p>
+                <a
+                  href="mailto:karigaritheprint@gmail.com"
+                  className="text-sm md:text-lg font-bold break-all hover:underline"
+                  style={{ color: '#A05838' }}
+                >
+                  karigaritheprint@gmail.com
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            className="p-4 md:p-6 rounded-2xl text-left"
+            style={{ background: 'rgba(160, 88, 56, 0.1)' }}
+          >
+            <div className="flex items-center gap-3 md:gap-4">
+              <div
+                className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center"
+                style={{ background: '#A05838' }}
+              >
+                <svg
+                  className="w-5 h-5 md:w-6 md:h-6"
+                  style={{ color: '#F5F1E8' }}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+              </div>
+
+              <div>
+                <p
+                  className="text-xs md:text-sm font-semibold mb-1"
+                  style={{ color: '#7C4028' }}
+                >
+                  Phone
+                </p>
+                <a
+                  href="tel:+919871516061"
+                  className="text-sm md:text-lg font-bold hover:underline"
+                  style={{ color: '#A05838' }}
+                >
+                  +91 981 807 2257
+                  <br />
+                  +91 987 151 6061
+                </a>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <footer className="py-12 px-6" style={{ borderTop: '1px solid rgba(245, 241, 232, 0.2)' }}>
         <div className="max-w-6xl mx-auto text-center">
