@@ -460,7 +460,7 @@ export default function App() {
                   className="text-sm md:text-lg font-bold hover:underline"
                   style={{ color: '#A05838' }}
                 >
-                  +91 981 807 2257
+                  +91 701 142 3702
                   <br />
                   +91 987 151 6061
                 </a>
