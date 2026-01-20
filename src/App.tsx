@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Sparkles, Zap, TrendingUp, Users, Rocket, ArrowRight, Star, Award, Target } from 'lucide-react';
+import { Sparkles, Zap, TrendingUp, Users, ArrowRight, Star, Award, Target } from 'lucide-react';
 
 const KarigariLogo = () => (
   <svg viewBox="0 0 860 640" className="w-full h-full" preserveAspectRatio="xMidYMid meet">
@@ -21,7 +21,10 @@ const KarigariLogo = () => (
 
 export default function App() {
   const [scrollY, setScrollY] = useState(0);
-  const [isVisible, setIsVisible] = useState({ history: true });
+  const [isVisible, setIsVisible] = useState<Record<string, boolean>>({
+    history: true,
+  });
+  
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
